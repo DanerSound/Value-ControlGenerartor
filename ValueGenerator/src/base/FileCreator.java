@@ -1,7 +1,9 @@
 package base;
 
 import java.io.File;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.util.Scanner;
 import java.io.IOException;
 
@@ -11,7 +13,7 @@ public class FileCreator {
 		  try {
 	            File file = new File("sampleFile.txt");
 	            if(file.createNewFile())
-	                System.out.println("File creation successfull");
+	                System.out.println("Success!");
 	                WriterOnFile();
 	        }
 	        catch(IOException io) {
@@ -34,10 +36,43 @@ public class FileCreator {
          
 	}
 	
-	public static void WriterOnFile() throws IOException{
+	private static void WriterOnFile(){
+		
+		BufferedWriter bw = null;
+		FileWriter fw = null;
 
+		try {
+
+			String content = "ciao Chiara!\n";
+
+			fw = new FileWriter("sampleFile.txt");
+			bw = new BufferedWriter(fw);
+			bw.write(content);
+
+			System.out.println("Done");
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		} finally {
+
+			try {
+
+				if (bw != null)
+					bw.close();
+
+				if (fw != null)
+					fw.close();
+
+			} catch (IOException ex) {
+
+				ex.printStackTrace();
+
+			}
+
+		}
 
 	}
-	
 }	
 	
