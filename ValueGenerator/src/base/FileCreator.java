@@ -7,14 +7,14 @@ import java.io.FileWriter;
 import java.util.Scanner;
 import java.io.IOException;
 
-public class FileCreator {
+public class FileCreator extends WriteOnFile {
 
 	public static void CreatorFile() {
 		try {
 			File file = new File("sampleFile.txt");
 			if (file.createNewFile()){
 				System.out.println("Success!");
-				WriterOnFile();
+			//WriterOnFile();
 				}
 		} catch (IOException io) {
 			io.printStackTrace();
@@ -34,26 +34,9 @@ public class FileCreator {
 			e.printStackTrace();
 	  }
 	}
-
-	private static void WriterOnFile() {
-		BufferedWriter bw = null;
-		FileWriter fw = null;
-
-		try {
-			String content = "TEST STRING \n"; // LINE IN
-			fw = new FileWriter("sampleFile.txt");
-			bw = new BufferedWriter(fw);
-			bw.write(content);
-			System.out.println("Done");
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (bw != null) bw.close();
-				if (fw != null) fw.close();
-			} catch (IOException ex) {
-				ex.printStackTrace();
-			}
-		}
+	@Override
+	public void writeValues(int[] arrayofMisures) {
+		// TODO Auto-generated method stub
+		
 	}
 }
