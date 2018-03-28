@@ -18,13 +18,13 @@ public class ValueSterzo extends WriteOnFile {
 		BufferedWriter bw = null;
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter("sampleFile.txt");
+			fw = new FileWriter("SterzoValues.txt");
 			bw = new BufferedWriter(fw);
-			for (int i = 1; i < arrayofMisures.length - 1; i++) {
+			for (int i = 1; i < arrayofMisures.length; i++) {
 				String content = arrayofMisures[i]+" ".toString();
 				bw.write(content);
+				System.out.println(i);
 			}
-			System.out.println("Done");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
