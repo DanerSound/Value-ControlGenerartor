@@ -36,9 +36,7 @@ public class ValueOstacoli extends WriteOnFile {
 			fw = new FileWriter("OstacoliValues.txt");
 			bw = new BufferedWriter(fw);
 			for (int i = 1; i < arrayofMisures.length; i++) {
-				String content = arrayofMisures[i] + " ".toString();
-				bw.write(content);
-				System.out.println(i);
+				bw.write(arrayofMisures[i] + " ".toString());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
