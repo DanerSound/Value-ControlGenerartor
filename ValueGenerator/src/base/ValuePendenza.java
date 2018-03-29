@@ -3,25 +3,26 @@ package base;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Random;
 
-public class ValueSterzo extends WriteOnFile {
-
-	public static Object[] generatedNumbers(Object[] vett) {
-		for (int i = 1; i < vett.length - 1; i++) {
-			vett[i] = (int) (Math.random() * 100);
+public class ValuePendenza extends WriteOnFile {
+	
+	public Object[] randInt(int min, int max,Object[] vett) {
+		Random rand = new Random();
+		for(int i=0;i<vett.length;i++) {
+		vett[i]= rand.nextInt((max - min) + 1) + min;
 		}
 		return vett;
 	}
-
 	@Override
 	public void writeValues(Object[] arrayofMisures) {
 		BufferedWriter bw = null;
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter("SterzoValues.txt");
+			fw = new FileWriter("PendenzaValues.txt");
 			bw = new BufferedWriter(fw);
 			for (int i = 1; i < arrayofMisures.length; i++) {
-				String content = arrayofMisures[i]+" ".toString();
+				String content = arrayofMisures[i] + " ".toString();
 				bw.write(content);
 			}
 		} catch (IOException e) {
@@ -36,6 +37,5 @@ public class ValueSterzo extends WriteOnFile {
 				ex.printStackTrace();
 			}
 		}
-
 	}
 }
