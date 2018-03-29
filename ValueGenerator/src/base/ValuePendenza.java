@@ -21,7 +21,7 @@ public class ValuePendenza extends WriteOnFile {
 		try {
 			fw = new FileWriter("PendenzaValues.txt");
 			bw = new BufferedWriter(fw);
-			for (int i = 1; i < arrayofMisures.length; i++) {
+			for (int i = 0; i < arrayofMisures.length; i++) {
 				String content = arrayofMisures[i] + " ".toString();
 				bw.write(content);
 			}
@@ -29,10 +29,12 @@ public class ValuePendenza extends WriteOnFile {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (bw != null)
+				if (bw != null) {
 					bw.close();
-				if (fw != null)
+				}
+				if (fw != null) {
 					fw.close();
+				}
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}

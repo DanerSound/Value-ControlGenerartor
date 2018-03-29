@@ -20,7 +20,7 @@ public class ValueSterzo extends WriteOnFile {
 		try {
 			fw = new FileWriter("SterzoValues.txt");
 			bw = new BufferedWriter(fw);
-			for (int i = 1; i < arrayofMisures.length; i++) {
+			for (int i = 1; i < arrayofMisures.length; i++) { // TODO fix
 				String content = arrayofMisures[i]+" ".toString();
 				bw.write(content);
 			}
@@ -28,10 +28,12 @@ public class ValueSterzo extends WriteOnFile {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (bw != null)
+				if (bw != null) {
 					bw.close();
-				if (fw != null)
+				}
+				if (fw != null) {
 					fw.close();
+				}
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
