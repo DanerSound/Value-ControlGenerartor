@@ -6,32 +6,26 @@ import java.io.IOException;
 import java.util.Random;
 
 public class ValueOstacoli extends WriteOnFile {
-	
-	public static void GenerarteOstacoliValues(Object[] vett) {
+
+	public Object[] GenerarteOstacoliValues(Object[] vett) {
 		Random r = new Random();
-		String parola=new String();
-		
-	    String alphabet = "AB";	
-	    int misures=0;
-	    
-	    while(misures!=100){
-	    	int arrayIndex;
-	        parola=" ";
-	        int distance=0;
-	        for (arrayIndex = 1; arrayIndex < vett.length - 1; arrayIndex++) {
-		    	for(int n=0; n<=1; n++) { 
-		    		char ostacoloType=alphabet.charAt(r.nextInt(alphabet.length()));
-		        	parola=ostacoloType+parola;
-		        	distance=(int)(Math.random() * 100);
-		    		vett[arrayIndex]=parola+" "+distance;
-		    		System.out.println(" "+vett[arrayIndex]);
-		    		System.out.println(" "+arrayIndex);
-		    	}
-		    	
-		    }
-	        misures++;
-	    
-	    }
+		String misura = new String();
+		String alphabet = "AB";
+		int misures = 0;
+		int arrayIndex = 0;
+
+		while (misures != 100) {
+			misura = " ";
+			Integer distance = 0;
+			char ostacoloType = alphabet.charAt(r.nextInt(alphabet.length()));
+			misura = ostacoloType + misura;
+			distance = (int) (Math.random() * 100);
+			misura = ostacoloType + distance.toString();
+			vett[arrayIndex] = misura;
+			arrayIndex++;
+			misures++;
+		}
+		return vett;
 	}
 
 	@Override
@@ -42,7 +36,7 @@ public class ValueOstacoli extends WriteOnFile {
 			fw = new FileWriter("OstacoliValues.txt");
 			bw = new BufferedWriter(fw);
 			for (int i = 1; i < arrayofMisures.length; i++) {
-				String content = arrayofMisures[i]+" ".toString();
+				String content = arrayofMisures[i] + " ".toString();
 				bw.write(content);
 				System.out.println(i);
 			}
@@ -59,7 +53,5 @@ public class ValueOstacoli extends WriteOnFile {
 			}
 		}
 	}
-		
+
 }
-
-
