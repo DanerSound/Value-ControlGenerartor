@@ -8,20 +8,15 @@ import java.util.Random;
 public class ValueOstacoli extends WriteOnFile {
 
 	public Object[] GenerarteOstacoliValues(Object[] vett) {
-		Random r = new Random();
-		String misura = new String();
 		String alphabet = "AB";
 		int misures = 0;
 		int arrayIndex = 0;
 
 		while (misures != 100) {
-			misura = " ";
 			Integer distance = 0;
-			char ostacoloType = alphabet.charAt(r.nextInt(alphabet.length()));
-			misura = ostacoloType + misura;
+			char ostacoloType = alphabet.charAt((new Random()).nextInt(alphabet.length()));
 			distance = (int) (Math.random() * 100);
-			misura = ostacoloType + distance.toString();
-			vett[arrayIndex] = misura;
+			vett[arrayIndex] = ostacoloType + distance.toString();
 			arrayIndex++;
 			misures++;
 		}
