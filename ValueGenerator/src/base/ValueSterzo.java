@@ -14,7 +14,7 @@ public class ValueSterzo extends WriteOnFile {
 	}
 
 	@Override
-	public void writeValues(Integer[] arrayofMisures) {
+	public void writeValues(Object[] arrayofMisures) {
 		BufferedWriter bw = null;
 		FileWriter fw = null;
 		try {
