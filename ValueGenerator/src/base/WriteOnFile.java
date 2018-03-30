@@ -1,7 +1,35 @@
 package base;
 
-public abstract class WriteOnFile {
-	
-	public abstract void writeValues(Object[] arrayofMisures);
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
+public  class WriteOnFile {
+	
+	public static void writeValues(Object[] arrayofMisures,String fileName){
+		BufferedWriter bw = null;
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(fileName);
+			bw = new BufferedWriter(fw);
+			for (int i = 1; i < arrayofMisures.length; i++) {
+				String content = arrayofMisures[i]+" ".toString();
+				bw.write(content);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (bw != null)
+					bw.close();
+				if (fw != null)
+					fw.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+
+	}
+
+	
 }
