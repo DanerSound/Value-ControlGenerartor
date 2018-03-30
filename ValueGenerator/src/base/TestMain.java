@@ -7,7 +7,7 @@ public class TestMain {
 		
 		Object[]values = new Object[100];	
 		String[]fileNames={"SterzoValues.txt","PendenzaValues.txt","OstacoliValues.txt"};
-
+		
 		values=ValueSterzo.generatedNumbers(values);
 		WriteOnFile.writeValues(values,fileNames[0]);
 		
