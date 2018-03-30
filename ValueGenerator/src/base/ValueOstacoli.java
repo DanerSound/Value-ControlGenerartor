@@ -4,23 +4,17 @@ import java.util.Random;
 
 public class ValueOstacoli extends WriteOnFile {
 
-	public static Object[] GenerarteOstacoliValues(Object[] vett) {
-		Random r = new Random();
-		String misura = new String();
-		String alphabet = "AB";
-		int misures = 0;
-		int arrayIndex = 0;
 
-		while (misures != 100) {
-			misura = " ";
+	public Object[] GenerarteOstacoliValues(Object[] vett) {
+		String alphabet = "AB";
+		int controlIndex=0;
+		
+		while (controlIndex!= 100) {
 			Integer distance = 0;
-			char ostacoloType = alphabet.charAt(r.nextInt(alphabet.length()));
-			misura = ostacoloType + misura;
+			char ostacoloType = alphabet.charAt((new Random()).nextInt(alphabet.length()));
 			distance = (int) (Math.random() * 100);
-			misura = ostacoloType + distance.toString();
-			vett[arrayIndex] = misura;
-			arrayIndex++;
-			misures++;
+			vett[controlIndex] = ostacoloType + distance.toString();
+			controlIndex++;
 		}
 		return vett;
 	}
