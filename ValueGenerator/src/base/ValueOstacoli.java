@@ -2,9 +2,8 @@ package base;
 
 import java.util.Random;
 
-public class ValueOstacoli extends WriteOnFile {
-
-
+public class ValueOstacoli {
+	
 	public static Object[] GenerarteOstacoliValues(Object[] vett) {
 		String alphabet = "AB";
 		int controlIndex=0;

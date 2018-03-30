@@ -2,7 +2,7 @@ package base;
 
 import java.util.Random;
 
-public class ValuePendenza extends WriteOnFile {
+public class ValuePendenza {
 	
 	public static Object[] randInt(int min, int max,Object[] vett) {
 		Random rand = new Random();

@@ -13,17 +13,18 @@ public  class WriteOnFile {
 			fw = new FileWriter(fileName);
 			bw = new BufferedWriter(fw);
 			for (int i = 1; i < arrayofMisures.length; i++) {
-				String content = arrayofMisures[i]+" ".toString();
-				bw.write(content);
+				  bw.write(arrayofMisures[i]+" ".toString());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (bw != null)
+				if (bw != null) {
 					bw.close();
-				if (fw != null)
+				}
+				if (fw != null) {
 					fw.close();
+				}
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
