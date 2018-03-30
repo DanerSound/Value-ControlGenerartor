@@ -5,7 +5,7 @@ import java.util.Random;
 public class ValueOstacoli extends WriteOnFile {
 
 
-	public Object[] GenerarteOstacoliValues(Object[] vett) {
+	public static Object[] GenerarteOstacoliValues(Object[] vett) {
 		String alphabet = "AB";
 		int controlIndex=0;
 		
