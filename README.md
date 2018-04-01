@@ -6,9 +6,7 @@ the main project is availabe at this [repo](https://github.com/DanerSound/Proget
 
 The main purpose of this program is to automatically generate 100 random values,
 
-which by matching [the track](https://github.com/DanerSound/ProgettoArchitetture-/blob/master/ProgettoAE_aa_17-18%20finale.pdf) 
-
-conditions can be evaluated.
+which by matching [the track](https://github.com/DanerSound/ProgettoArchitetture-/blob/master/ProgettoAE_aa_17-18%20finale.pdf) conditions can be evaluated.
 
 This program will generate 3 files **.txt** : 
 
