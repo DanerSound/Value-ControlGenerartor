@@ -13,7 +13,7 @@ public  class WriteOnFile {
 			fw = new FileWriter(fileName);
 			bw = new BufferedWriter(fw);
 			for (int i = 1; i < arrayofMisures.length; i++) {
-				  bw.write(arrayofMisures[i]+" ".toString());
+				  bw.write(arrayofMisures[i]+" ");	
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

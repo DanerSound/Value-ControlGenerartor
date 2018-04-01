@@ -6,12 +6,14 @@ public class ValueOstacoli {
 	
 	public static Object[] GenerarteOstacoliValues(Object[] vett) {
 		String alphabet = "AB";
+		String alphabetDistance ="123456789ABCDEF";
+		char[] dis = new char[2];
 
 		for(int controlIndex=0;controlIndex<100;controlIndex++) {
-			Integer distance = 0;
-			char ostacoloType = alphabet.charAt((new Random()).nextInt(alphabet.length()));
-			distance = (int) (Math.random() * 100);
-			vett[controlIndex] = ostacoloType + distance.toString();
+			  char ostacoloType = alphabet.charAt((new Random()).nextInt(alphabet.length()));
+			  dis[0]= alphabetDistance.charAt((new Random()).nextInt(alphabetDistance.length()));
+			  dis[1]= alphabetDistance.charAt((new Random()).nextInt(alphabetDistance.length()));		 
+		vett[controlIndex] = ostacoloType + String.valueOf(dis[0])+String.valueOf(dis[1]);	  
 		}
 		return vett;
 	}
