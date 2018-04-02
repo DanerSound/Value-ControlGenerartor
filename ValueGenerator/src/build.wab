@@ -1,5 +1,0 @@
-javac base/Main.java &&
-
-jar -cvfm ValueGenerator.jar META-INF/MANIFEST.MF base/*.class &&
-
-rm base/*.class
