@@ -13,8 +13,3 @@ This program will generate 3 files **.txt** :
 the names are: _sterzoIN.txt_ , _pendenzaIN.txt_ , _distanzaIN.txt_ .
 
 they will contain 100 random values .
-
-  ![Work_in_progress](http://cliffordgarstang.com/wp-content/uploads/2013/01/Work_in_progress.png)
-  
-  i working on Release setup and exec information.
-
