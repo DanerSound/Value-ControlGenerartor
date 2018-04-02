@@ -10,7 +10,7 @@ which by matching [the track](https://github.com/DanerSound/ProgettoArchitetture
 
 This program will generate 3 files **.txt** : 
 
-the names are: _SterzoValues.txt_ , _PendenzaValues.txt_ , _OstacoliValues.txt_
+the names are: _sterzoIN.txt_ , _pendenzaIN.txt_ , _distanzaIN.txt_
 
 they will contain 100 random values .
 
