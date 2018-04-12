@@ -10,7 +10,7 @@ public class Main {
 		values = ValueSterzo.generatedNumbers(values);
 		WriteOnFile.writeValues(values, fileNames[0]);
 
-		values = ValuePendenza.randInt(-60, 60, values);
+		values = ValuePendenza.randInt(-180,180, values);
 		WriteOnFile.writeValues(values, fileNames[1]);
 
 		values = ValueOstacoli.GenerarteOstacoliValues(values);
