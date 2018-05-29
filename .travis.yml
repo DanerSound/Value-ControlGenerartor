@@ -10,3 +10,4 @@ before_script:
 
 script:
   - ./build.wab
+  - java -jar ValueGenerator.jar
