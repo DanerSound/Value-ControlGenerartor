@@ -1,0 +1,10 @@
+language: java
+
+jdk:
+  - oraclejdk8
+- oraclejdk9
+
+before_script: cd ValueGenerator/src
+
+script:
+- ./build.wab
