@@ -16,6 +16,8 @@ public class Main {
 		values = ValueOstacoli.GenerarteOstacoliValues(values);
 		WriteOnFile.writeValues(values, fileNames[2]);
 
+		System.out.println("Created all the files");
+
 	}
 
 }
