@@ -1,0 +1,13 @@
+language: java
+sudo: required
+
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+
+before_script: 
+  - cd ValueGenerator/src
+
+script:
+  - ./build.wab
+  - java -jar ValueGenerator.jar

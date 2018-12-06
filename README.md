@@ -1,5 +1,7 @@
 # Value-ControlGenerartor
 
+[![Build Status](https://travis-ci.org/DanerSound/Value-ControlGenerartor.svg?branch=FileCreator)](https://travis-ci.org/DanerSound/Value-ControlGenerartor)
+
 This is a support Repo for the project of the course of Computer architectures
 
 the main project is availabe at this [repo](https://github.com/DanerSound/ProgettoArchitetture-) .
